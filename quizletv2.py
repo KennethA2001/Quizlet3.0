@@ -36,9 +36,12 @@ def quiz(list_terms,termList):
 
     streak = 0
 
+    for y in range(300):
+        print()
+
     for list_term in termList:
 
-        guess= str(input("Input the definition of " + list_term))
+        guess= str(input("Input the definition of " + list_term + " "))
 
         for n1,n2 in zip(termList, def_list):
 
@@ -46,17 +49,17 @@ def quiz(list_terms,termList):
                 points += 1
                 streak += 1
                                 
-            if streak >= 2:
-                if streak % 2 == 1:
-                    print("Wow, you must be a genius")
-                else:
-                    print("Keep going, you're doing great")
-            elif streak == 1:
-                print("You're almost there")
+    if streak >= 2:
+        if streak % 2 == 1:
+            print("Wow, you must be a genius")
+        else:
+            print("Keep going, you're doing great")
+    elif streak == 1:
+        print("You're almost there")
 
-            else:
-                missed_words.append(definition)
-                streak = 0
+    else:
+        missed_words.append(definition)
+        streak = 0
             
 
     print(" Game over. You got, " + str(points) + " outta " + term)
