@@ -1,5 +1,7 @@
 def header():
-    print("Welcome to Kenneth's Quizlet.  This program is meant to help you study for your upcoming assesment.")
+    print("Welcome to 'Quizzes by Kenneth'.")
+    print()
+    print("This program is meant to help you study for your upcoming assesment.")
 
 
 def get_terms():
@@ -58,7 +60,7 @@ def quiz(list_terms,termList):
         print("You're almost there")
 
     else:
-        missed_words.append(definition)
+        missed_words.append(list_term)
         streak = 0
             
 
@@ -70,5 +72,6 @@ def quiz(list_terms,termList):
         
                 
 header()
+print()
 get_terms()
 quiz(list_terms, termList)
